@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re:0</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* 讓按鈕自動換行 */
+            justify-content: center;
+            gap: 15px;
+            max-width: 600px; /* 控制最大寬度 */
+            margin: 20px auto;
+        }
+        .button-container a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px;
+            width: 80px;
+            background-color: #b1b1b1;
+            color: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #292828;
+        }
+        .button-container img {
+            width: 80px; /* 圖片大小 */
+            height: 80px;
+            margin-bottom: 5px;
+        }
+
+        .button-container a img { <!--換圖 ，CSS在hoverEffect.js-->
+            transition: 0.3s;
+        }
+
+.sidebar a {
+	display: flex;  /* 讓圖片與文字並排 */
+	align-items: center;  /* 🔹 讓文字與圖片垂直置中 */
+	text-decoration: none;
+	color: black;
+	padding: 10px;
+	font-size: 18px; /* 🔹 可以調整字體大小 */
+}
+
+.sidebar a img {
+	margin-right: 10px;  /* 🔹 增加圖片與文字的間距 */
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;  /* 🔹 確保圖片與文字在同一條基線 */
+}
+    </style>
+	<link rel="stylesheet" href="https://kennylou92.github.io/tos_story_en/style.css">
+</head>
+<body>
+    <!-- <h1>通行證</h1> -->
+	<button class="sidebar-toggle" onclick="toggleSidebar()">☰ 選單</button>
+	<div class="sidebar" id = "sidebar">
+	<a href="https://kennylou92.github.io/tos_story_en/">🏠Home</a>
+	<a href="https://kennylou92.github.io/tos_story_en/oldera.html"><img src="https://kennylou92.github.io/tos_story/Img/20001.png" alt="Enoch Era">Enoch Era</a>
+	<a href="https://kennylou92.github.io/tos_story_en/newera.html"><img src="https://kennylou92.github.io/tos_story/Img/20003.png"  alt="New Era">New Era</a>
+    <a href="https://kennylou92.github.io/tos_story_en/standalone.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/0400.jpg" alt="Standalone">Standalone</a>
+	<a href="https://kennylou92.github.io/tos_story_en/crossover.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/0685.jpg" alt="Collab">Collab</a>
+	<a href="https://kennylou92.github.io/tos_story_en/battlepass.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2751.jpg"  alt="BattlePass">BattlePass</a>
+	<a href="https://kennylou92.github.io/tos_story_en/summoner.html"><img src="https://kennylou92.github.io/tos_story/Img/20001.png" alt="Summoner">Summoner</a>
+	</div>
+    <div class="button-container">
+	<a href="https://kennylou92.github.io/tos_story_en/story/10852.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10852.jpg" alt="Rem">Rem</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10854.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10854.jpg" alt="Ram">Ram</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10855.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10855.jpg" alt="Otto Suwen & Frufoo">Otto Suwen & Frufoo</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10856.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10856.jpg" alt="Felt">Felt</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10857.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10857.jpg" alt="Emilia & Pack">Emilia & Pack</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10858.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10858.jpg" alt="Crusch Karsten & Ferris">Crusch Karsten & Ferris</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10859.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10859.jpg" alt="Subaru Natsuki">Subaru Natsuki</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10860.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10860.jpg" alt="Beatrice">Beatrice</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10861.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10861.jpg" alt="White Whale">White Whale</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10862.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10862.jpg" alt="Theresia Van Astrea">Theresia Van Astrea</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10863.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10863.jpg" alt="Wilhelm Van Astrea">Wilhelm Van Astrea</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10864.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10864.jpg" alt="Julius Juukulius">Julius Juukulius</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10865.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10865.jpg" alt="Roswaal L Mathers">Roswaal L Mathers</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10866.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10866.jpg" alt="Meili Portroute">Meili Portroute</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10867.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10867.jpg" alt="Elsa Granhiert">Elsa Granhiert</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10868.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10868.jpg" alt="The Great Rabbits">The Great Rabbits</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10869.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10869.jpg" alt="Garfiel Tinsel">Garfiel Tinsel</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10870.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10870.jpg" alt="Petelgeuse Romaneeconti">Petelgeuse Romaneeconti</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10871.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10871.jpg" alt="Echidna">Echidna</a>
+
+    </div>    <!-- JavaScript -->
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var sidebar = document.getElementById("sidebar");
+        var toggleButton = document.querySelector(".sidebar-toggle");
+
+        toggleButton.addEventListener("click", function() {
+            if (sidebar.classList.contains("active")) {
+                sidebar.classList.remove("active"); // 隱藏
+            } else {
+                sidebar.classList.add("active"); // 顯示
+            }
+        });
+
+        // 點擊內容區域時，側邊欄自動收回
+        document.addEventListener("click", function(event) {
+            if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
+    });
+	</script>
+	
+	<script src="https://kennylou92.github.io/tos_story_en/hoverEffect.js"></script>
+</body>
+</html>
