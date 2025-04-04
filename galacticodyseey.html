@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Odyseey</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* 讓按鈕自動換行 */
+            justify-content: center;
+            gap: 15px;
+            max-width: 600px; /* 控制最大寬度 */
+            margin: 20px auto;
+        }
+        .button-container a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px;
+            width: 80px;
+            background-color: #b1b1b1;
+            color: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #292828;
+        }
+        .button-container img {
+            width: 80px; /* 圖片大小 */
+            height: 80px;
+            margin-bottom: 5px;
+        }
+		.sidebar a {
+			display: flex;  /* 讓圖片與文字並排 */
+			align-items: center;  /* 🔹 讓文字與圖片垂直置中 */
+			text-decoration: none;
+			color: black;
+			padding: 10px;
+			font-size: 18px; /* 🔹 可以調整字體大小 */
+		}
+
+		.sidebar a img {
+			margin-right: 10px;  /* 🔹 增加圖片與文字的間距 */
+			width: 50px;
+			height: 50px;
+			vertical-align: middle;  /* 🔹 確保圖片與文字在同一條基線 */
+		}
+    </style>
+	<link rel="stylesheet" href="https://kennylou92.github.io/tos_story/style.css">
+</head>
+<body>
+	<button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+	<div class="sidebar" id = "sidebar">
+	<a href="https://kennylou92.github.io/tos_story_en/">🏠Home</a>
+	<a href="https://kennylou92.github.io/tos_story_en/oldera.html"><img src="https://kennylou92.github.io/tos_story/Img/20001.png" alt="Enoch Era">Enoch Era</a>
+	<a href="https://kennylou92.github.io/tos_story_en/newera.html"><img src="https://kennylou92.github.io/tos_story/Img/20003.png"  alt="New Era">New Era</a>
+    <a href="https://kennylou92.github.io/tos_story_en/standalone.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/0400.jpg" alt="Standalone">Standalone</a>
+	<a href="https://kennylou92.github.io/tos_story_en/crossover.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/0685.jpg" alt="Collab">Collab</a>
+	<a href="https://kennylou92.github.io/tos_story_en/battlepass.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2751.jpg"  alt="BattlePass">BattlePass</a>
+	<a href="https://kennylou92.github.io/tos_story_en/summoner.html"><img src="https://kennylou92.github.io/tos_story/Img/20001.png" alt="Summoner">Summoner</a>
+	</div>
+    <div class="button-container">
+	<a href="https://kennylou92.github.io/tos_story_en/story/10657.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10657.jpg" alt="Deviated Course - Laura">Deviated Course - Laura</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10658.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10658.jpg" alt="Interstellar Cruiser - Montana">Interstellar Cruiser - Montana</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10660.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10660.jpg" alt="Course of Justice - Scáthach">Course of Justice - Scáthach</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10661.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10661.jpg" alt="Galaxy Gazer - Rosalind">Galaxy Gazer - Rosalind</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10662.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10662.jpg" alt="Plasmatic Burst - Kepler">Plasmatic Burst - Kepler</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10663.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10663.jpg" alt="Mortal Atonement - Nuada">Mortal Atonement - Nuada</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10664.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10664.jpg" alt="Tenderhearted Bionics - Gamma">Tenderhearted Bionics - Gamma</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10665.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10665.jpg" alt="Hazardous Experiment - Galois">Hazardous Experiment - Galois</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10666.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10666.jpg" alt="Nebula’s Threnody - Theta">Nebula’s Threnody - Theta</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10667.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10667.jpg" alt="Infinite Search - Ohio">Infinite Search - Ohio</a>
+		<!-- <a href="https://kennylou92.github.io/tos_story/.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/.jpg" alt=""></a> -->
+        <!-- 只要繼續加這行，按鈕會自動換行 -->
+    </div>
+    <!-- JavaScript -->
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var sidebar = document.getElementById("sidebar");
+        var toggleButton = document.querySelector(".sidebar-toggle");
+
+        toggleButton.addEventListener("click", function() {
+            if (sidebar.classList.contains("active")) {
+                sidebar.classList.remove("active"); // 隱藏
+            } else {
+                sidebar.classList.add("active"); // 顯示
+            }
+        });
+
+        // 點擊內容區域時，側邊欄自動收回
+        document.addEventListener("click", function(event) {
+            if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
+    });
+	</script>
+
+</body>
+</html>
