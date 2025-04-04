@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Era</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* 讓按鈕自動換行 */
+            justify-content: center;
+            gap: 15px;
+            max-width: 1200px; /* 控制最大寬度 */
+            margin: 20px auto;
+        }
+        .button-container a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px;
+            width: 80px;
+            background-color: #b1b1b1;
+            color: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #292828;
+        }
+        .button-container img {
+            width: 80px; /* 圖片大小 */
+            height: 80px;
+            margin-bottom: 5px;
+        }
+		.sidebar a {
+			display: flex;  /* 讓圖片與文字並排 */
+			align-items: center;  /* 🔹 讓文字與圖片垂直置中 */
+			text-decoration: none;
+			color: black;
+			padding: 10px;
+			font-size: 18px; /* 🔹 可以調整字體大小 */
+		}
+
+		.sidebar a img {
+			margin-right: 10px;  /* 🔹 增加圖片與文字的間距 */
+			width: 50px;
+			height: 50px;
+			vertical-align: middle;  /* 🔹 確保圖片與文字在同一條基線 */
+		}
+    </style>
+	<link rel="stylesheet" href="https://kennylou92.github.io/tos_story_en/style.css">
+</head>
+<body>
+	<button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+	<div class="sidebar" id = "sidebar">
+	<a href="https://kennylou92.github.io/tos_story_en/">🏠Home</a>
+	<a href="https://kennylou92.github.io/tos_story_en/oldera.html"><img src="https://kennylou92.github.io/tos_story/Img/20001.png" alt="Enoch Era">Enoch Era</a>
+	<a href="https://kennylou92.github.io/tos_story_en/newera.html"><img src="https://kennylou92.github.io/tos_story/Img/20003.png"  alt="New Era">New Era</a>
+    <a href="https://kennylou92.github.io/tos_story_en/standalone.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/0400.jpg" alt="Standalone Series">Standalone Series</a>
+	<a href="https://kennylou92.github.io/tos_story_en/crossover.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/0685.jpg" alt="Collab">Collab</a>
+	<a href="https://kennylou92.github.io/tos_story_en/battlepass.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2751.jpg"  alt="BattlePass">BattlePass</a>
+	</div>
+    <div class="button-container">
+	<a href="https://kennylou92.github.io/tos_story_en/story/10036.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10036.jpg" alt="Coco the Fanatic Foodie">Coco the Fanatic Foodie</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10037.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10037.jpg" alt="Kogol the Fiery Stripes">Kogol the Fiery Stripes</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10038.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10038.jpg" alt="Sebelle the Cheerful Nature Lover">Sebelle the Cheerful Nature Lover</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10039.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10039.jpg" alt="Lorraine the Crimson Sceptre">Lorraine the Crimson Sceptre</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10040.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10040.jpg" alt="Hane Onidzuka the Hovering Halberds">Hane Onidzuka the Hovering Halberds</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10041.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10041.jpg" alt="Cokira the Flaming Dragonhorn">Cokira the Flaming Dragonhorn</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10042.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10042.jpg" alt="Water Lily the Flower Artist">Water Lily the Flower Artist</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10043.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10043.jpg" alt="Lianxuan the Flute Fairy">Lianxuan the Flute Fairy</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10044.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10044.jpg" alt="Flore the Charging Laser">Flore the Charging Laser</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10045.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10045.jpg" alt="Doleto the Innovative Machinist">Doleto the Innovative Machinist</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10047.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10047.jpg" alt="Vivacious Dragona - Javanor">Vivacious Dragona - Javanor</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10048.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10048.jpg" alt="Rumbling Lionheart - Queness">Rumbling Lionheart - Queness</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10049.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10049.jpg" alt="Blazing Mentor - Nocturne">Blazing Mentor - Nocturne</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10050.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10050.jpg" alt="Justice Garrison - Ron">Justice Garrison - Ron</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10051.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10051.jpg" alt="Frost Breaker - Ruban">Frost Breaker - Ruban</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10052.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10052.jpg" alt="Soaring Blaze - Swift">Soaring Blaze - Swift</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10053.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10053.jpg" alt="Hunting Teeth - Mumu">Hunting Teeth - Mumu</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10054.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10054.jpg" alt="Trinity Flames - Leafy, Flora, Windie">Trinity Flames - Leafy, Flora, Windie</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10055.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10055.jpg" alt="Roaring Forest - Copeland">Roaring Forest - Copeland</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10056.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10056.jpg" alt="Mysterious Scryer - Belian">Mysterious Scryer - Belian</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10057.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10057.jpg" alt="Ordnance weapon - The Blade">Ordnance weapon - The Blade</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10058.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10058.jpg" alt="Intelligent Monkey King - Sun Wuyi">Intelligent Monkey King - Sun Wuyi</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10059.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10059.jpg" alt="Into the Polar - Meh Teh">Into the Polar - Meh Teh</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10060.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10060.jpg" alt="Ferocious Seamstress  - Siannodel">Ferocious Seamstress  - Siannodel</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10061.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10061.jpg" alt="Skillful Healer - Leanan Sidhe">Skillful Healer - Leanan Sidhe</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10062.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10062.jpg" alt="Halo Warfare - Nesoi">Halo Warfare - Nesoi</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10066.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10066.jpg" alt="Final Bronze Cloth of Cygnus - Hyoga">Final Bronze Cloth of Cygnus - Hyoga</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10068.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10068.jpg" alt="Final Bronze Cloth of Phoenix - Ikki">Final Bronze Cloth of Phoenix - Ikki</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10070.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10070.jpg" alt="Final Bronze Cloth of Dragon - Shiryu">Final Bronze Cloth of Dragon - Shiryu</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10072.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10072.jpg" alt="Final Bronze Cloth of Pegasus - Seiya">Final Bronze Cloth of Pegasus - Seiya</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10074.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10074.jpg" alt="Final Bronze Cloth of Andromeda - Shun">Final Bronze Cloth of Andromeda - Shun</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10076.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10076.jpg" alt="Saint of Lyra - Orphe">Saint of Lyra - Orphe</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10077.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10077.jpg" alt="Gemini Kanon">Gemini Kanon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10078.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10078.jpg" alt="Commander of Inferno - Pandora">Commander of Inferno - Pandora</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10079.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10079.jpg" alt="Athena the Goddess of War and Wisdom">Athena the Goddess of War and Wisdom</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10080.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10080.jpg" alt="Papillon Myu">Papillon Myu</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10081.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10081.jpg" alt="Balron Lune">Balron Lune</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10082.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10082.jpg" alt="Shun (Chapter Hades)">Shun (Chapter Hades)</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10083.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10083.jpg" alt="Aquarius Camus (Surplice)">Aquarius Camus (Surplice)</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10084.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10084.jpg" alt="Capricorn Shura (Surplice)">Capricorn Shura (Surplice)</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10085.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10085.jpg" alt="Gemini Saga (Surplice)">Gemini Saga (Surplice)</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10086.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10086.jpg" alt="Aries Shion (Surplice)">Aries Shion (Surplice)</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10087.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10087.jpg" alt="Garuda Aiacos">Garuda Aiacos</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10088.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10088.jpg" alt="Griffon Minos">Griffon Minos</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10089.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10089.jpg" alt="Wyvern Rhadamanthys">Wyvern Rhadamanthys</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10090.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10090.jpg" alt="Hypnos the God of Sleep">Hypnos the God of Sleep</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10091.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10091.jpg" alt="Chapter Hades">Chapter Hades</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10092.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10092.jpg" alt="Thanatos the God of Death">Thanatos the God of Death</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10093.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10093.jpg" alt="Poseidon the God of Ocean">Poseidon the God of Ocean</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10094.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10094.jpg" alt="Waterdeep Kindness - Galanodel">Waterdeep Kindness - Galanodel</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10095.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10095.jpg" alt="Veteran Vigilance - Gabino">Veteran Vigilance - Gabino</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10096.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10096.jpg" alt="Untainted Ardour - Fang Tu">Untainted Ardour - Fang Tu</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10097.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10097.jpg" alt="Pharmacologic Whizz - Bessie">Pharmacologic Whizz - Bessie</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10098.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10098.jpg" alt="Candlelight of Immolation - Bifrons">Candlelight of Immolation - Bifrons</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10099.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10099.jpg" alt="Vitriolic Savagery- Bunyip">Vitriolic Savagery- Bunyip</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10100.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10100.jpg" alt="Valiant Brilliance - Ourea">Valiant Brilliance - Ourea</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10101.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10101.jpg" alt="Genial Protodemon - Iverson">Genial Protodemon - Iverson</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10102.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10102.jpg" alt="Cony Medic - Bernice">Cony Medic - Bernice</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10103.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10103.jpg" alt="Dreamy Miser - Lazurite">Dreamy Miser - Lazurite</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10104.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10104.jpg" alt="Automated Receptionist No.7208">Automated Receptionist No.7208</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10105.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10105.jpg" alt="Mechanized Security No.5213">Mechanized Security No.5213</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10106.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10106.jpg" alt="Postie Express - Beracah ">Postie Express - Beracah </a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10107.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10107.jpg" alt="The Menace Under Skirt - Julie">The Menace Under Skirt - Julie</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10108.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10108.jpg" alt="Lifelong Covenant - He Jin">Lifelong Covenant - He Jin</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10109.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10109.jpg" alt="Singing Detector No.2234">Singing Detector No.2234</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10110.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10110.jpg" alt="Alkaid Martinet - Hua Jin">Alkaid Martinet - Hua Jin</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10111.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10111.jpg" alt="Truth Watcher - Andromalius">Truth Watcher - Andromalius</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10117.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10117.jpg" alt="Flames of Divine Order - Ke Hun">Flames of Divine Order - Ke Hun</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10118.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10118.jpg" alt="Error-free Shooter - Randena">Error-free Shooter - Randena</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10119.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10119.jpg" alt="Stellar Guidance - Mamitu">Stellar Guidance - Mamitu</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10121.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10121.jpg" alt="Todoroki Shoto">Todoroki Shoto</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10122.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10122.jpg" alt="Bakugo Katsuki">Bakugo Katsuki</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10123.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10123.jpg" alt="Midoriya Izuku">Midoriya Izuku</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10124.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10124.jpg" alt="Iida Tenya">Iida Tenya</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10125.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10125.jpg" alt="Shinso Hitoshi">Shinso Hitoshi</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10126.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10126.jpg" alt="Uraraka Ochako">Uraraka Ochako</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10127.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10127.jpg" alt="Kirishima Eijirou">Kirishima Eijirou</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10128.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10128.jpg" alt="Asui Tsuyu">Asui Tsuyu</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10129.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10129.jpg" alt="All Might">All Might</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10130.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10130.jpg" alt="Eraser Head">Eraser Head</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10131.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10131.jpg" alt="Endeavor">Endeavor</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10132.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10132.jpg" alt="Hawks">Hawks</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10133.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10133.jpg" alt="Toga Himiko">Toga Himiko</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10134.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10134.jpg" alt="Dabi">Dabi</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10135.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10135.jpg" alt="Shigaraki Tomura">Shigaraki Tomura</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10136.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10136.jpg" alt="All For One">All For One</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10137.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10137.jpg" alt="Dreamland Speeder - Ben">Dreamland Speeder - Ben</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10138.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10138.jpg" alt="Embryonic Inversion - Euclid">Embryonic Inversion - Euclid</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10146.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10146.jpg" alt="Unvacillating Guardian - Khloe">Unvacillating Guardian - Khloe</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10147.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10147.jpg" alt="Volcanic Draco-flame - Milton">Volcanic Draco-flame - Milton</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10149.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10149.jpg" alt="Dotty">Dotty</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10150.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10150.jpg" alt="The First Synthetic Soul - Lilith">The First Synthetic Soul - Lilith</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10151.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10151.jpg" alt="Mechanical Keeper of Oroz">Mechanical Keeper of Oroz</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10152.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10152.jpg" alt="Nine-headed Beast - Kaiming Shou">Nine-headed Beast - Kaiming Shou</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10153.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10153.jpg" alt="Beauty of Violence - Nettie">Beauty of Violence - Nettie</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10154.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10154.jpg" alt="Matter Equilibrium - Planck">Matter Equilibrium - Planck</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10155.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10155.jpg" alt="Odds of Rationality - Eva">Odds of Rationality - Eva</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10156.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10156.jpg" alt="Predatory Nature - Powell">Predatory Nature - Powell</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10157.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10157.jpg" alt="Bouncing Hunter - Porter">Bouncing Hunter - Porter</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10158.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10158.jpg" alt="Crow Master - Halpas">Crow Master - Halpas</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10159.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10159.jpg" alt="False and Sham - Mayhem Arum">False and Sham - Mayhem Arum</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10160.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10160.jpg" alt="Salayatana Enlightenment - Sun Wushi">Salayatana Enlightenment - Sun Wushi</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10161.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10161.jpg" alt="Beast Tamer - Vivia the Little Witch">Beast Tamer - Vivia the Little Witch</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10162.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10162.jpg" alt="Refreshing Drumbeat - Lan">Refreshing Drumbeat - Lan</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10163.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10163.jpg" alt="Leading Evolution - Martin">Leading Evolution - Martin</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10164.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10164.jpg" alt="Luscious Purity - Letitia">Luscious Purity - Letitia</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10165.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10165.jpg" alt="The Savior - Enoch">The Savior - Enoch</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10166.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10166.jpg" alt="Sparkling Visionary - Ingrid">Sparkling Visionary - Ingrid</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10167.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10167.jpg" alt="Storm-breaking Dragonshiv - Ao Shengwen">Storm-breaking Dragonshiv - Ao Shengwen</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10168.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10168.jpg" alt="Beefy Standout - Machoslime">Beefy Standout - Machoslime</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10169.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10169.jpg" alt="A Prosperous New Year - Lei & Fok">A Prosperous New Year - Lei & Fok</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10170.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10170.jpg" alt="Euphonious Crooning - Melody">Euphonious Crooning - Melody</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10171.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10171.jpg" alt="Gratifying Hymn - Cassiel">Gratifying Hymn - Cassiel</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10172.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10172.jpg" alt="Gintoki Sakata">Gintoki Sakata</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10173.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10173.jpg" alt="Kagura">Kagura</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10174.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10174.jpg" alt="Tatsuma Sakamoto">Tatsuma Sakamoto</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10175.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10175.jpg" alt="Sadaharu">Sadaharu</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10176.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10176.jpg" alt="Shinpachi Shimura">Shinpachi Shimura</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10177.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10177.jpg" alt="Elizabeth">Elizabeth</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10178.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10178.jpg" alt="Kotarou Katsura">Kotarou Katsura</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10179.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10179.jpg" alt="Shinsuke Takasugi">Shinsuke Takasugi</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10180.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10180.jpg" alt="Sagaru Yamazaki">Sagaru Yamazaki</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10181.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10181.jpg" alt="Toushirou Hijikata">Toushirou Hijikata</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10182.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10182.jpg" alt="Sougo Okita">Sougo Okita</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10183.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10183.jpg" alt="Isao Kondou">Isao Kondou</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10184.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10184.jpg" alt="Shiroyasha (Gintoki Sakata)">Shiroyasha (Gintoki Sakata)</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10185.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10185.jpg" alt="Bansai Kawakami">Bansai Kawakami</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10186.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10186.jpg" alt="Kamui">Kamui</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10187.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10187.jpg" alt="Utsuro">Utsuro</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10188.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10188.jpg" alt="Tae Shimura">Tae Shimura</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10189.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10189.jpg" alt="Kyubei Yagyu">Kyubei Yagyu</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10190.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10190.jpg" alt="Ayame Sarutobi">Ayame Sarutobi</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10191.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10191.jpg" alt="Tsukuyo">Tsukuyo</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10192.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10192.jpg" alt="Tama">Tama</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10193.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10193.jpg" alt="Otose">Otose</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10194.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10194.jpg" alt="Justaway">Justaway</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10195.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10195.jpg" alt="Taizou Hasegawa">Taizou Hasegawa</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10196.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10196.jpg" alt="Prince Hata">Prince Hata</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10197.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10197.jpg" alt="Rippling Dragon-howl - Lelenia">Rippling Dragon-howl - Lelenia</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10198.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10198.jpg" alt="Vulpine Clergy - Abe Satoru">Vulpine Clergy - Abe Satoru</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10200.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10200.jpg" alt="Mesmerizing Tune - Mollyanna">Mesmerizing Tune - Mollyanna</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10201.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10201.jpg" alt="Reneging Supremacy - Zeus">Reneging Supremacy - Zeus</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10202.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10202.jpg" alt="Lord of Squirming Larva - Shudde">Lord of Squirming Larva - Shudde</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10203.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10203.jpg" alt="Helmeted Beauty - Nakin">Helmeted Beauty - Nakin</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10204.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10204.jpg" alt="Indelible Love - Miranda">Indelible Love - Miranda</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10205.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10205.jpg" alt="Egg-cellent Catcher - Runnie">Egg-cellent Catcher - Runnie</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10206.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10206.jpg" alt="Prince Debonair - Yule">Prince Debonair - Yule</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10207.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10207.jpg" alt="Prince of Wish-granting - Seere">Prince of Wish-granting - Seere</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10208.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10208.jpg" alt="Fervent Anthem - Serenade ">Fervent Anthem - Serenade </a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10209.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10209.jpg" alt="Gifted Machinist - Dolak">Gifted Machinist - Dolak</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10210.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10210.jpg" alt="Velocious Rodeo - Moe">Velocious Rodeo - Moe</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10211.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10211.jpg" alt="Neo: Reverse Mode">Neo: Reverse Mode</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10212.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10212.jpg" alt="Neo: HelloWorld Mode">Neo: HelloWorld Mode</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10213.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10213.jpg" alt="Mana, the Angel of Affection and Fellowship">Mana, the Angel of Affection and Fellowship</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10214.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10214.jpg" alt="Fierce Guardian of Paradise Gabriel">Fierce Guardian of Paradise Gabriel</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10215.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10215.jpg" alt="Lightblessed Trailblazer Uriel">Lightblessed Trailblazer Uriel</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10216.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10216.jpg" alt="Elusive Thief Arsene: Phantom Mode">Elusive Thief Arsene: Phantom Mode</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10217.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10217.jpg" alt="Great Queen of Fear Nostradamus">Great Queen of Fear Nostradamus</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10218.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10218.jpg" alt="Excalibur, Sacred Sword of True Faith">Excalibur, Sacred Sword of True Faith</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10219.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10219.jpg" alt="Mother of All Worlds Benzaiten">Mother of All Worlds Benzaiten</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10220.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10220.jpg" alt="Pandora, Unbridled Bringer of Hope">Pandora, Unbridled Bringer of Hope</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10221.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10221.jpg" alt="Two For All: The Power of Unity">Two For All: The Power of Unity</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10224.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10224.jpg" alt="Babel, Nativity of the New World">Babel, Nativity of the New World</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10225.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10225.jpg" alt="Naraku, God of the Abyss">Naraku, God of the Abyss</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10226.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10226.jpg" alt="Chalice System: Avalon">Chalice System: Avalon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10227.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10227.jpg" alt="The Immortal Sage Penglai">The Immortal Sage Penglai</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10228.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10228.jpg" alt="Antithesis, Contrarian">Antithesis, Contrarian</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10229.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10229.jpg" alt="Avid Fan Trio">Avid Fan Trio</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10235.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10235.jpg" alt="Hubristic Vampire - Dracula">Hubristic Vampire - Dracula</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10236.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10236.jpg" alt="Unambiguous Papilio - Joffe">Unambiguous Papilio - Joffe</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10237.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10237.jpg" alt="Belligerent Egotism - Megan">Belligerent Egotism - Megan</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10238.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10238.jpg" alt="Comradely Righteousness - Theo">Comradely Righteousness - Theo</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10239.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10239.jpg" alt="Tottering Swallowtail - Xaviera">Tottering Swallowtail - Xaviera</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10240.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10240.jpg" alt="Egotistic Intolerance - Philip">Egotistic Intolerance - Philip</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10241.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10241.jpg" alt="Boastful Brat - Winston">Boastful Brat - Winston</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10243.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10243.jpg" alt="Chimeric Marquess - Naberius">Chimeric Marquess - Naberius</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10244.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10244.jpg" alt="Yamato Ishida & Gabumon">Yamato Ishida & Gabumon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10245.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10245.jpg" alt="Taichi Yagami & Agumon">Taichi Yagami & Agumon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10246.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10246.jpg" alt="Mimi Tachikawa & Palmon">Mimi Tachikawa & Palmon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10247.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10247.jpg" alt="Takeru Takaishi & Patamon & Hikari Yagami & Gatomon">Takeru Takaishi & Patamon & Hikari Yagami & Gatomon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10248.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10248.jpg" alt="Koushiro Izumi & Tentomon">Koushiro Izumi & Tentomon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10249.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10249.jpg" alt="Jo Kido & Gomamon">Jo Kido & Gomamon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10250.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10250.jpg" alt="Sora Takenouchi & Biyomon">Sora Takenouchi & Biyomon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10251.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10251.jpg" alt="Leomon">Leomon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10252.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10252.jpg" alt="Devimon">Devimon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10253.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10253.jpg" alt="Ogremon">Ogremon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10254.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10254.jpg" alt="LadyDevimon">LadyDevimon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10255.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10255.jpg" alt="VenomMyotismon">VenomMyotismon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10256.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10256.jpg" alt="MetalSeadramon">MetalSeadramon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10257.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10257.jpg" alt="Puppetmon">Puppetmon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10258.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10258.jpg" alt="Machinedramon">Machinedramon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10259.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10259.jpg" alt="Piedmon">Piedmon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10260.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10260.jpg" alt="Apocalymon">Apocalymon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10261.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10261.jpg" alt="Diaboromon">Diaboromon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10262.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10262.jpg" alt="Veemon & Wormmon">Veemon & Wormmon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10263.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10263.jpg" alt="Numemon ＆ Sukamon ＆ Chuumon">Numemon ＆ Sukamon ＆ Chuumon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10270.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10270.jpg" alt="Contrivance Creator - Omega">Contrivance Creator - Omega</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10271.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10271.jpg" alt="Bereaved Cornflower- Entelec">Bereaved Cornflower- Entelec</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10273.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10273.jpg" alt="Recalcitrant Corrodent - House">Recalcitrant Corrodent - House</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10274.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10274.jpg" alt="Breeze of Chaparral - Adela">Breeze of Chaparral - Adela</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10275.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10275.jpg" alt="Serrated Teeth - Monstrous Shark">Serrated Teeth - Monstrous Shark</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10276.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10276.jpg" alt="Earthshaking Thump - Candy Giant">Earthshaking Thump - Candy Giant</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10277.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10277.jpg" alt="Macabre Critter - Vapula">Macabre Critter - Vapula</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10278.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10278.jpg" alt="Prolonged Benignity - Yulia">Prolonged Benignity - Yulia</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10279.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10279.jpg" alt="Star-crushing Strikes - Utu">Star-crushing Strikes - Utu</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10280.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10280.jpg" alt="Intrepid Liberator - Caesar">Intrepid Liberator - Caesar</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10281.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10281.jpg" alt="Green-eyed Cutlass - Gina">Green-eyed Cutlass - Gina</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10282.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10282.jpg" alt="Blitzing Cannonade - Randolph">Blitzing Cannonade - Randolph</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10283.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10283.jpg" alt="Spiteful Titanium - Kay">Spiteful Titanium - Kay</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10284.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10284.jpg" alt="Heir of Excalibur - Frederick">Heir of Excalibur - Frederick</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10285.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10285.jpg" alt="Gliding Gait - Hugo">Gliding Gait - Hugo</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10286.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10286.jpg" alt="Ensnaring Mastery - Marcus">Ensnaring Mastery - Marcus</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10287.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10287.jpg" alt="Cruising Avarice - Giles">Cruising Avarice - Giles</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10288.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10288.jpg" alt="Vampire Potentate - Carlo">Vampire Potentate - Carlo</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10291.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10291.jpg" alt="Silverfang">Silverfang</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10292.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10292.jpg" alt="Genos">Genos</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10293.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10293.jpg" alt="Terrible Tornado">Terrible Tornado</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10294.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10294.jpg" alt="Saitama">Saitama</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10295.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10295.jpg" alt="KING">KING</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10296.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10296.jpg" alt="Hellish Blizzard">Hellish Blizzard</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10297.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10297.jpg" alt="Mumen Rider">Mumen Rider</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10299.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10299.jpg" alt="Speed-o'-Sound Sonic">Speed-o'-Sound Sonic</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10300.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10300.jpg" alt="Garou">Garou</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10301.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10301.jpg" alt="Boros">Boros</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10302.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10302.jpg" alt="Murky Oculus - Mick">Murky Oculus - Mick</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10303.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10303.jpg" alt="Tidal Trills - Mia">Tidal Trills - Mia</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10304.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10304.jpg" alt="Strangling Tides - Wanda">Strangling Tides - Wanda</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10305.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10305.jpg" alt="Jillion Tentacles - Oliver">Jillion Tentacles - Oliver</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10306.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10306.jpg" alt="Prancing Lanterns - Akina">Prancing Lanterns - Akina</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10307.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10307.jpg" alt="Gown Capriccio - Lilith">Gown Capriccio - Lilith</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10309.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10309.jpg" alt="Wily Vulpes - Jiang Xiang">Wily Vulpes - Jiang Xiang</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10310.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10310.jpg" alt="Ganoderma Spore - Keanu">Ganoderma Spore - Keanu</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10311.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10311.jpg" alt="Freezing Heat - Cynthia">Freezing Heat - Cynthia</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10312.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10312.jpg" alt="Grizzly Bigotry - Lucius">Grizzly Bigotry - Lucius</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10313.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10313.jpg" alt="Trapping Jaws - Armand">Trapping Jaws - Armand</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10314.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10314.jpg" alt="Wooded Voodoo- York">Wooded Voodoo- York</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10315.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10315.jpg" alt="Fundraising Sham - Popo">Fundraising Sham - Popo</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10316.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10316.jpg" alt="Water Blast - Edgar">Water Blast - Edgar</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10317.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10317.jpg" alt="Fleeting Funeral -  Hua Jie">Fleeting Funeral -  Hua Jie</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10319.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10319.jpg" alt="Warlord of Trades - Lawson">Warlord of Trades - Lawson</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10320.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10320.jpg" alt="Prodigious Wizardry - Cilovic">Prodigious Wizardry - Cilovic</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10327.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10327.jpg" alt="The Assassin＜Thorn Princess＞">The Assassin＜Thorn Princess＞</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10328.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10328.jpg" alt="The Spy＜Twilight＞">The Spy＜Twilight＞</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10329.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10329.jpg" alt="Anya the Telepath">Anya the Telepath</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10331.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10331.jpg" alt="Franky Franklin">Franky Franklin</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10332.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10332.jpg" alt="Becky Blackbell">Becky Blackbell</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10333.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10333.jpg" alt="Bond Forger">Bond Forger</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10334.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10334.jpg" alt="Henry Henderson">Henry Henderson</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10335.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10335.jpg" alt="Damian & Emile & Ewen">Damian & Emile & Ewen</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10336.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10336.jpg" alt="Yuri Briar">Yuri Briar</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10337.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10337.jpg" alt="Anya Forger">Anya Forger</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10338.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10338.jpg" alt="Loid Forger">Loid Forger</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10339.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10339.jpg" alt="Yor Forger">Yor Forger</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10341.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10341.jpg" alt="Super Sailor Mercury">Super Sailor Mercury</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10342.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10342.jpg" alt="Super Sailor Mars">Super Sailor Mars</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10343.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10343.jpg" alt="Super Sailor Jupiter">Super Sailor Jupiter</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10344.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10344.jpg" alt="Super Sailor Moon">Super Sailor Moon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10346.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10346.jpg" alt="Super Sailor Saturn">Super Sailor Saturn</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10347.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10347.jpg" alt="Super Sailor Chibi Moon & Helios">Super Sailor Chibi Moon & Helios</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10348.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10348.jpg" alt="Super Sailor Venus">Super Sailor Venus</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10349.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10349.jpg" alt="Super Sailor Pluto">Super Sailor Pluto</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10350.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10350.jpg" alt="Luna & Artemis & Diana">Luna & Artemis & Diana</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10351.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10351.jpg" alt="Neo-Queen Serenity & King Endymion">Neo-Queen Serenity & King Endymion</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10352.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10352.jpg" alt="Super Sailor Neptune">Super Sailor Neptune</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10353.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10353.jpg" alt="Super Sailor Uranus">Super Sailor Uranus</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10354.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10354.jpg" alt="Tuxedo Mask">Tuxedo Mask</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10355.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10355.jpg" alt="Palla-Palla">Palla-Palla</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10356.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10356.jpg" alt="Ves-Ves">Ves-Ves</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10357.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10357.jpg" alt="Jun-Jun">Jun-Jun</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10358.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10358.jpg" alt="Cere-Cere">Cere-Cere</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10359.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10359.jpg" alt="Zirconia">Zirconia</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10360.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10360.jpg" alt="Nehalennia">Nehalennia</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10361.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10361.jpg" alt="Daring Tune  - Yan Luoyu">Daring Tune  - Yan Luoyu</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10362.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10362.jpg" alt="Lonely Lullaby - Hua Shuangting">Lonely Lullaby - Hua Shuangting</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10363.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10363.jpg" alt="Untruthful Dream-trader - Madam Nightmare">Untruthful Dream-trader - Madam Nightmare</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10364.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10364.jpg" alt="Weaponized Horror - Incubus Robot">Weaponized Horror - Incubus Robot</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10368.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10368.jpg" alt="Blossoming Crescent - Artemis">Blossoming Crescent - Artemis</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10370.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10370.jpg" alt="Devisal of Zeroes - Nulla">Devisal of Zeroes - Nulla</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10371.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10371.jpg" alt="Cessation of Ones - Una">Cessation of Ones - Una</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10372.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10372.jpg" alt="Vampire Principessa - Carmilla
+	">Vampire Principessa - Carmilla
+	</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10373.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10373.jpg" alt="Explosion Maniac - Nobel">Explosion Maniac - Nobel</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10374.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10374.jpg" alt="Wrathful Gales - Shinatsuhiko">Wrathful Gales - Shinatsuhiko</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10375.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10375.jpg" alt="Thundering Taiko - Haruka">Thundering Taiko - Haruka</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10376.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10376.jpg" alt="Hina Celebration - Kyoko">Hina Celebration - Kyoko</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10377.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10377.jpg" alt="Imperial Obina - Kazuki">Imperial Obina - Kazuki</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10378.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10378.jpg" alt="Talented Monster - Darren">Talented Monster - Darren</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10379.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10379.jpg" alt="Promising Words - Cereus Prophesier">Promising Words - Cereus Prophesier</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10380.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10380.jpg" alt="Steam-powered  Fortress - Oshiro">Steam-powered  Fortress - Oshiro</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10381.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10381.jpg" alt="Jumpy Boxer - Jim">Jumpy Boxer - Jim</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10382.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10382.jpg" alt="Mikasa Ackerman">Mikasa Ackerman</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10383.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10383.jpg" alt="Eren Yeager">Eren Yeager</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10384.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10384.jpg" alt="Attack Titan">Attack Titan</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10385.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10385.jpg" alt="Sasha Blouse">Sasha Blouse</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10386.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10386.jpg" alt="Armin Arlelt">Armin Arlelt</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10387.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10387.jpg" alt="Colossus Titan (Armin)">Colossus Titan (Armin)</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10388.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10388.jpg" alt="Lieutenant Levi">Lieutenant Levi</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10389.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10389.jpg" alt="Jean Kirstein">Jean Kirstein</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10390.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10390.jpg" alt="Historia Reiss">Historia Reiss</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10391.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10391.jpg" alt="Hans Zoe">Hans Zoe</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10392.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10392.jpg" alt="Erwin Smith">Erwin Smith</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10393.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10393.jpg" alt="Kenny Ackerman">Kenny Ackerman</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10394.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10394.jpg" alt="Pure Titan">Pure Titan</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10395.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10395.jpg" alt="Colossus Titan (Berthold)">Colossus Titan (Berthold)</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10396.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10396.jpg" alt="Cart Titan">Cart Titan</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10397.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10397.jpg" alt="Jaw Titan">Jaw Titan</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10398.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10398.jpg" alt="Annie Leonhart & Female Titan">Annie Leonhart & Female Titan</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10399.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10399.jpg" alt="War Hammer Titan">War Hammer Titan</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10400.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10400.jpg" alt="Reiner Braun & Armored Titan">Reiner Braun & Armored Titan</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10401.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10401.jpg" alt="Zeke Yeager & Beast Titan">Zeke Yeager & Beast Titan</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10408.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10408.jpg" alt="Boxing Campione - Ali">Boxing Campione - Ali</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10409.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10409.jpg" alt="Bloodletting Missionary - Macbeth">Bloodletting Missionary - Macbeth</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10410.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10410.jpg" alt="The Ever-blazing Sol - Atum">The Ever-blazing Sol - Atum</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10411.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10411.jpg" alt="Rocketing Shrine - Pyramid">Rocketing Shrine - Pyramid</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10412.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10412.jpg" alt="Mastaba Raider - Iras">Mastaba Raider - Iras</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10413.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10413.jpg" alt="Undecayed Physician - Imhotep">Undecayed Physician - Imhotep</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10414.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10414.jpg" alt="The Great Sphinx  - Fathia">The Great Sphinx  - Fathia</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10416.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10416.jpg" alt="Battle-crazed Swordswoman - Jubei Yagyu ">Battle-crazed Swordswoman - Jubei Yagyu </a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10417.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10417.jpg" alt="Caged Albino - Snow">Caged Albino - Snow</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10418.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10418.jpg" alt="Lightning Blackjay - Hayate Hyakuji">Lightning Blackjay - Hayate Hyakuji</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10419.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10419.jpg" alt="Quiet Mirage - Nagi Hyakuji">Quiet Mirage - Nagi Hyakuji</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10420.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10420.jpg" alt="Heroic Outlaw - Goemon Ishikawa">Heroic Outlaw - Goemon Ishikawa</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10421.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10421.jpg" alt="Crocodile Smile - Soho Takuan">Crocodile Smile - Soho Takuan</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10423.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10423.jpg" alt="Adventure Navigator - Ashley">Adventure Navigator - Ashley</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10424.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10424.jpg" alt="Toge Inumaki">Toge Inumaki</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10425.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10425.jpg" alt="Maki Zen'in">Maki Zen'in</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10426.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10426.jpg" alt="Panda">Panda</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10427.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10427.jpg" alt="Yuji Itadori">Yuji Itadori</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10428.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10428.jpg" alt="Satoru Gojo">Satoru Gojo</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10429.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10429.jpg" alt="Nobara Kugisaki">Nobara Kugisaki</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10430.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10430.jpg" alt="Kento Nanami">Kento Nanami</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10431.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10431.jpg" alt="Megumi Fushiguro">Megumi Fushiguro</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10432.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10432.jpg" alt="Mai Zen'in">Mai Zen'in</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10433.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10433.jpg" alt="Aoi Todo">Aoi Todo</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10434.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10434.jpg" alt="Ryomen Sukuna">Ryomen Sukuna</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10435.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10435.jpg" alt="Mahito">Mahito</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10436.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10436.jpg" alt="Jogo">Jogo</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10437.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10437.jpg" alt="Hanami">Hanami</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10438.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10438.jpg" alt="Mechamaru Ultimate">Mechamaru Ultimate</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10439.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10439.jpg" alt="Suguru Geto">Suguru Geto</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10440.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10440.jpg" alt="Woodened Lies - Pinocchio">Woodened Lies - Pinocchio</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10447.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10447.jpg" alt="Arrows of Putrefaction - Leraje">Arrows of Putrefaction - Leraje</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10448.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10448.jpg" alt="Racing Beats - Duan Yang">Racing Beats - Duan Yang</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10450.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10450.jpg" alt="Plotted Vengeance - Napoleon">Plotted Vengeance - Napoleon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10451.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10451.jpg" alt="Unconditional Love - Luvia">Unconditional Love - Luvia</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10452.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10452.jpg" alt="Marooning Fringe - Letizia">Marooning Fringe - Letizia</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10453.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10453.jpg" alt="Covetous Reflection - Carlo">Covetous Reflection - Carlo</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10454.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10454.jpg" alt="Rapacious Appetite - Sebastiano">Rapacious Appetite - Sebastiano</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10455.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10455.jpg" alt="Disordered Gluttony - Harvard">Disordered Gluttony - Harvard</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10456.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10456.jpg" alt="Argent Decapitation - Charlotte">Argent Decapitation - Charlotte</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10459.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10459.jpg" alt="Sai Fujiwara">Sai Fujiwara</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10460.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10460.jpg" alt="Shinichiro Isumi">Shinichiro Isumi</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10461.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10461.jpg" alt="The Eternal Rival - Akira Toya">The Eternal Rival - Akira Toya</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10462.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10462.jpg" alt="The Strongest Shodan - Hikaru Shindo">The Strongest Shodan - Hikaru Shindo</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10463.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10463.jpg" alt="Yoshitaka Waya">Yoshitaka Waya</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10464.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10464.jpg" alt="Kosuke Ochi">Kosuke Ochi</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10465.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10465.jpg" alt="Asumi Nase">Asumi Nase</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10468.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10468.jpg" alt="Akari Fujisaki">Akari Fujisaki</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10472.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10472.jpg" alt="Atsushi Kurata">Atsushi Kurata</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10473.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10473.jpg" alt="Seiji Ogata">Seiji Ogata</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10474.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10474.jpg" alt="Koyo Toya">Koyo Toya</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10480.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10480.jpg" alt="Dancing Ophidian - Angelina">Dancing Ophidian - Angelina</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10481.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10481.jpg" alt="The Skeleton’s Lament - Natsuhiko">The Skeleton’s Lament - Natsuhiko</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10486.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10486.jpg" alt="The Burgeoning Synthetic Soul - Adam">The Burgeoning Synthetic Soul - Adam</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10487.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10487.jpg" alt="Undersea Fantasy - Encanto Whale">Undersea Fantasy - Encanto Whale</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10489.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10489.jpg" alt="Pioneering Drama - Shakespeare">Pioneering Drama - Shakespeare</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10490.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10490.jpg" alt="Strigine Caregiver - Rene">Strigine Caregiver - Rene</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10491.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10491.jpg" alt="Moonlit Black Cats - Sachi">Moonlit Black Cats - Sachi</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10492.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10492.jpg" alt="The Lightning Flash - Asuna">The Lightning Flash - Asuna</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10493.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10493.jpg" alt="The Axe-wielder - Agil">The Axe-wielder - Agil</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10494.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10494.jpg" alt="Virtual Navigator - Yui">Virtual Navigator - Yui</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10495.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10495.jpg" alt="The Black Swordsman - Kirito">The Black Swordsman - Kirito</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10496.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10496.jpg" alt="Furin Kazan - Klein">Furin Kazan - Klein</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10497.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10497.jpg" alt="The Dragon Tamer - Silica">The Dragon Tamer - Silica</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10498.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10498.jpg" alt="The Blacksmith - Lisbeth">The Blacksmith - Lisbeth</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10499.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10499.jpg" alt="The Sylph Swordswoman - Leafa">The Sylph Swordswoman - Leafa</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10500.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10500.jpg" alt="The Light Bow Archer - Sinon">The Light Bow Archer - Sinon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10501.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10501.jpg" alt="The Zekken - Yuuki">The Zekken - Yuuki</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10502.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10502.jpg" alt="The Undine - Siune">The Undine - Siune</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10503.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10503.jpg" alt="The Sylph Leader - Sakuya">The Sylph Leader - Sakuya</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10504.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10504.jpg" alt="The Cait Sith Leader - Alicia">The Cait Sith Leader - Alicia</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10505.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10505.jpg" alt="The Berserk Healer - Asuna">The Berserk Healer - Asuna</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10506.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10506.jpg" alt="The Spriggan - Kirito">The Spriggan - Kirito</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10508.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10508.jpg" alt="Ragout Rabbit">Ragout Rabbit</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10509.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10509.jpg" alt="Heathcliff">Heathcliff</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10510.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10510.jpg" alt="Gleam Eyes">Gleam Eyes</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10511.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10511.jpg" alt="The Skull Reaper">The Skull Reaper</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10512.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10512.jpg" alt="Kuradeel">Kuradeel</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10513.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10513.jpg" alt="Rosalia">Rosalia</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10514.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10514.jpg" alt="Fairy King Oberon">Fairy King Oberon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10515.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10515.jpg" alt="Four-armed Giant">Four-armed Giant</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10516.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10516.jpg" alt="The Ice Sniper - Sinon">The Ice Sniper - Sinon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10517.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10517.jpg" alt="The Firearmed Phanton Sword-wielder - Kirito">The Firearmed Phanton Sword-wielder - Kirito</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10518.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10518.jpg" alt="Death Gun">Death Gun</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10519.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10519.jpg" alt="Dawning Ether - Cang Bi">Dawning Ether - Cang Bi</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10520.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10520.jpg" alt="Sunbursting Phaser - Leonard">Sunbursting Phaser - Leonard</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10556.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10556.jpg" alt="Philosopher of Truth - Mimir">Philosopher of Truth - Mimir</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10558.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10558.jpg" alt="Saint of Sins - Sophie">Saint of Sins - Sophie</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10560.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10560.jpg" alt="Gyre of Resonance - Novalis & Ursula">Gyre of Resonance - Novalis & Ursula</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10561.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10561.jpg" alt="Prophet of Quakes - Agares">Prophet of Quakes - Agares</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10577.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10577.jpg" alt="Caesar Anthonio Zeppeli">Caesar Anthonio Zeppeli</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10578.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10578.jpg" alt="Mohammed Avdol & Magician’s Red">Mohammed Avdol & Magician’s Red</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10579.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10579.jpg" alt="Joseph Joestar">Joseph Joestar</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10580.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10580.jpg" alt="Jonathan Joestar">Jonathan Joestar</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10581.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10581.jpg" alt="Jotaro Kujo & Star Platinum">Jotaro Kujo & Star Platinum</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10582.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10582.jpg" alt="Jean Pierre Polnareff & Silver Chariot">Jean Pierre Polnareff & Silver Chariot</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10583.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10583.jpg" alt="Noriaki Kakyoin & Hierophant Green">Noriaki Kakyoin & Hierophant Green</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10584.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10584.jpg" alt="Iggy & The Fool">Iggy & The Fool</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10585.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10585.jpg" alt="Robert E. O. Speedwagon">Robert E. O. Speedwagon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10587.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10587.jpg" alt="Erina">Erina</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10588.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10588.jpg" alt="Will A. Zeppeli">Will A. Zeppeli</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10589.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10589.jpg" alt="Dio Brando">Dio Brando</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10590.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10590.jpg" alt="Lisa Lisa">Lisa Lisa</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10591.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10591.jpg" alt="Wamuu">Wamuu</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10592.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10592.jpg" alt="Esidisi">Esidisi</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10593.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10593.jpg" alt="Kars">Kars</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10594.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10594.jpg" alt="Joseph Joestar & Hermit Purple">Joseph Joestar & Hermit Purple</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10595.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10595.jpg" alt="Hol Horse & The Emperor">Hol Horse & The Emperor</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10596.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10596.jpg" alt="Pet Shop & Horus">Pet Shop & Horus</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10597.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10597.jpg" alt="Cool Ice & Cream">Cool Ice & Cream</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10598.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10598.jpg" alt="DIO & The World">DIO & The World</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10599.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10599.jpg" alt="Whirling Shadow - Heifeng Guai">Whirling Shadow - Heifeng Guai</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10604.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10604.jpg" alt="Oriental Heiress - Hitomi Tsukishita">Oriental Heiress - Hitomi Tsukishita</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10605.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10605.jpg" alt="Shower of Sparks - Cyndamoth">Shower of Sparks - Cyndamoth</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10606.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10606.jpg" alt="Velvety Wings - Margonfly">Velvety Wings - Margonfly</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10608.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10608.jpg" alt="The Humble Poor - Bi Gan">The Humble Poor - Bi Gan</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10609.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10609.jpg" alt="Promised Prosperity - Caishen">Promised Prosperity - Caishen</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10610.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10610.jpg" alt="Scarlet Matchmaker - Hongniang">Scarlet Matchmaker - Hongniang</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10612.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10612.jpg" alt="Bumble Rider - Scarlett">Bumble Rider - Scarlett</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10613.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10613.jpg" alt="Marching Engineer - Mechanical Ant">Marching Engineer - Mechanical Ant</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10616.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10616.jpg" alt="Sanctified Will - Prometheus">Sanctified Will - Prometheus</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10617.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10617.jpg" alt="Crystallic Resplendence - Nero">Crystallic Resplendence - Nero</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10620.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10620.jpg" alt="Unwholesome Roots - Pan Jinlian">Unwholesome Roots - Pan Jinlian</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10621.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10621.jpg" alt="Peachy Glamor - Chen Yuanyuan">Peachy Glamor - Chen Yuanyuan</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10622.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10622.jpg" alt="Undeadly Allure - Lin Daiyu">Undeadly Allure - Lin Daiyu</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10623.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10623.jpg" alt="Parasitical Cost - Zhao Feiyan">Parasitical Cost - Zhao Feiyan</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10624.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10624.jpg" alt="Blustering Chain - Shangguan Wan’er">Blustering Chain - Shangguan Wan’er</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10625.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10625.jpg" alt="Invasive Sprouts - Lady Meng Jiang">Invasive Sprouts - Lady Meng Jiang</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10626.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10626.jpg" alt="Plashing Steps - Wang Ying">Plashing Steps - Wang Ying</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10627.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10627.jpg" alt="Scarlet-robed Warrioress - Hu Sanniang">Scarlet-robed Warrioress - Hu Sanniang</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10628.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10628.jpg" alt="Cryptic Incantation - Jia Baoyu">Cryptic Incantation - Jia Baoyu</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10629.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10629.jpg" alt="Desireless Path - Ximen Qing">Desireless Path - Ximen Qing</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10630.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10630.jpg" alt="The Queen’s Dignity - Semele">The Queen’s Dignity - Semele</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10631.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10631.jpg" alt="All-seeing Eyes - Botis">All-seeing Eyes - Botis</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10632.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10632.jpg" alt="Imperious Command - Boreas">Imperious Command - Boreas</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10634.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10634.jpg" alt="Sempster of Words - Leon">Sempster of Words - Leon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10635.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10635.jpg" alt="Catastrophic Outgrowth - Unknown Creature">Catastrophic Outgrowth - Unknown Creature</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10636.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10636.jpg" alt="Kenshin Himura">Kenshin Himura</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10637.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10637.jpg" alt="Sanosuke Sagara">Sanosuke Sagara</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10638.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10638.jpg" alt="Kaoru Kamiya">Kaoru Kamiya</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10639.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10639.jpg" alt="Hajime Saito">Hajime Saito</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10640.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10640.jpg" alt="Tsubame Sanjo">Tsubame Sanjo</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10641.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10641.jpg" alt="Yahiko Myojin">Yahiko Myojin</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10642.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10642.jpg" alt="Megumi Takani">Megumi Takani</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10643.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10643.jpg" alt="Kihe Hiruma & Gohe Hiruma">Kihe Hiruma & Gohe Hiruma</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10644.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10644.jpg" alt="Jine Udo">Jine Udo</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10647.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10647.jpg" alt="Raijuta Isurugi">Raijuta Isurugi</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10648.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10648.jpg" alt="Tsunan Tsukioka">Tsunan Tsukioka</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10649.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10649.jpg" alt="Beshimi">Beshimi</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10650.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10650.jpg" alt="Hyottoko">Hyottoko</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10651.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10651.jpg" alt="Shikijo">Shikijo</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10652.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10652.jpg" alt="Aoshi Shinomori">Aoshi Shinomori</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10653.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10653.jpg" alt="Han'nya">Han'nya</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10654.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10654.jpg" alt="Kanryu Takeda">Kanryu Takeda</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10657.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10657.jpg" alt="Deviated Course - Laura">Deviated Course - Laura</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10658.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10658.jpg" alt="Interstellar Cruiser - Montana">Interstellar Cruiser - Montana</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10660.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10660.jpg" alt="Course of Justice - Scáthach">Course of Justice - Scáthach</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10661.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10661.jpg" alt="Galaxy Gazer - Rosalind">Galaxy Gazer - Rosalind</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10662.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10662.jpg" alt="Plasmatic Burst - Kepler">Plasmatic Burst - Kepler</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10663.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10663.jpg" alt="Mortal Atonement - Nuada">Mortal Atonement - Nuada</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10664.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10664.jpg" alt="Tenderhearted Bionics - Gamma">Tenderhearted Bionics - Gamma</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10665.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10665.jpg" alt="Hazardous Experiment - Galois">Hazardous Experiment - Galois</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10666.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10666.jpg" alt="Nebula’s Threnody - Theta">Nebula’s Threnody - Theta</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10667.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10667.jpg" alt="Infinite Search - Ohio">Infinite Search - Ohio</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10672.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10672.jpg" alt="King of Destiny Phonoa">King of Destiny Phonoa</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10673.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10673.jpg" alt="Kasli, Daughter of Chaos">Kasli, Daughter of Chaos</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10674.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10674.jpg" alt="Raging Bahamut Cat ">Raging Bahamut Cat </a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10675.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10675.jpg" alt="Empress Cat">Empress Cat</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10676.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10676.jpg" alt="The Cat God">The Cat God</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10677.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10677.jpg" alt="Lasvoss Reborn">Lasvoss Reborn</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10679.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10679.jpg" alt="Cat">Cat</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10680.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10680.jpg" alt="Tank Cat">Tank Cat</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10681.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10681.jpg" alt="Axe Cat">Axe Cat</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10682.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10682.jpg" alt="Gold Cat">Gold Cat</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10688.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10688.jpg" alt="Unobtrusive Invasion - Huangdi">Unobtrusive Invasion - Huangdi</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10689.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10689.jpg" alt="Enslaved Guardian - Xiao Yu">Enslaved Guardian - Xiao Yu</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10690.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10690.jpg" alt="Yamada Asaemon Senta">Yamada Asaemon Senta</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10691.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10691.jpg" alt="Gabimaru">Gabimaru</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10692.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10692.jpg" alt="Yamada Asaemon Sagiri">Yamada Asaemon Sagiri</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10693.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10693.jpg" alt="Aza Chobe">Aza Chobe</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10694.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10694.jpg" alt="Yamada Asaemon Toma">Yamada Asaemon Toma</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10695.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10695.jpg" alt="Yamada Asaemon Tenza">Yamada Asaemon Tenza</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10696.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10696.jpg" alt="Yamada Asaemon Shion">Yamada Asaemon Shion</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10697.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10697.jpg" alt="Yamada Asaemon Fuchi">Yamada Asaemon Fuchi</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10698.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10698.jpg" alt="Nurugai">Nurugai</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10699.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10699.jpg" alt="Rokurota">Rokurota</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10700.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10700.jpg" alt="Gabimaru’s Wife">Gabimaru’s Wife</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10701.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10701.jpg" alt="Yuzuriha">Yuzuriha</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10702.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10702.jpg" alt="Mei">Mei</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10703.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10703.jpg" alt="Tamiya Gantetsusai">Tamiya Gantetsusai</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10704.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10704.jpg" alt="Keiun">Keiun</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10705.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10705.jpg" alt="Yuanjun Tathātā - Zhu Jin">Yuanjun Tathātā - Zhu Jin</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10707.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10707.jpg" alt="Amoghavajra Jiujun - Mu Dan">Amoghavajra Jiujun - Mu Dan</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10711.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10711.jpg" alt="Soul-severing Edges - Tyrfing">Soul-severing Edges - Tyrfing</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10712.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10712.jpg" alt="Dignified Ridge - Gram">Dignified Ridge - Gram</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10713.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10713.jpg" alt="Ingrained Malevolence - Admah">Ingrained Malevolence - Admah</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10714.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10714.jpg" alt="Displaced Innocence - Sodom">Displaced Innocence - Sodom</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10715.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10715.jpg" alt="Atrocious Lineage - Gomorrah">Atrocious Lineage - Gomorrah</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10716.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10716.jpg" alt="Luminous Predator - Zoar">Luminous Predator - Zoar</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10717.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10717.jpg" alt="Bloom of Resilience - Lilac">Bloom of Resilience - Lilac</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10718.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10718.jpg" alt="Guilt-ridden Eclosion - Evander">Guilt-ridden Eclosion - Evander</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10719.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10719.jpg" alt="Nurturing Embrace  - Mistilteinn">Nurturing Embrace  - Mistilteinn</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10727.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10727.jpg" alt="Servant of Justness - Caprio">Servant of Justness - Caprio</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10728.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10728.jpg" alt="Sweet Arrest - Emily">Sweet Arrest - Emily</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10729.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10729.jpg" alt="Pathogen Remover - Kappa">Pathogen Remover - Kappa</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10730.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10730.jpg" alt="Azure’s Blessing - Heshi">Azure’s Blessing - Heshi</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10731.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10731.jpg" alt="Executor of Retribution - Salome">Executor of Retribution - Salome</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10732.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10732.jpg" alt="Magisterial Poise - Tadayuki Kamo">Magisterial Poise - Tadayuki Kamo</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10733.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10733.jpg" alt="Voracious Thirst - Ruslan">Voracious Thirst - Ruslan</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10734.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10734.jpg" alt="Iniquity Decimation - Ruth">Iniquity Decimation - Ruth</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10737.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10737.jpg" alt="Soei">Soei</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10738.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10738.jpg" alt="Benimaru">Benimaru</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10739.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10739.jpg" alt="Gobta">Gobta</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10740.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10740.jpg" alt="Shion">Shion</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10741.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10741.jpg" alt="Hakuro">Hakuro</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10742.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10742.jpg" alt="Rimuru Tempest">Rimuru Tempest</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10744.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10744.jpg" alt="Ranga">Ranga</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10745.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10745.jpg" alt="Gabiru">Gabiru</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10746.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10746.jpg" alt="Shizue Izawa">Shizue Izawa</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10747.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10747.jpg" alt="Shuna">Shuna</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10748.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10748.jpg" alt="Geld">Geld</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10749.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10749.jpg" alt="Diablo">Diablo</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10751.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10751.jpg" alt="Veldora the Storm Dragon">Veldora the Storm Dragon</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10753.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10753.jpg" alt="Maribel & Granville">Maribel & Granville</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10754.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10754.jpg" alt="Momiji">Momiji</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10755.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10755.jpg" alt="Masayuki">Masayuki</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10756.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10756.jpg" alt="Clayman">Clayman</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10757.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10757.jpg" alt="Ramiris">Ramiris</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10758.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10758.jpg" alt="Milim Nava">Milim Nava</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10759.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10759.jpg" alt="Hinata Sakaguchi">Hinata Sakaguchi</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10760.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10760.jpg" alt="Luminus Valentine">Luminus Valentine</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10770.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10770.jpg" alt="Arithmetic of Truths - Holmes">Arithmetic of Truths - Holmes</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10771.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10771.jpg" alt="Quacky Conclusion - Conan Doyle">Quacky Conclusion - Conan Doyle</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10772.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10772.jpg" alt="Deduction Before Dessert - Agatha">Deduction Before Dessert - Agatha</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10773.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10773.jpg" alt="Astute Diagnosis - Watson">Astute Diagnosis - Watson</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10774.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10774.jpg" alt="Redefinition of Variables - Moriarty">Redefinition of Variables - Moriarty</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10775.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10775.jpg" alt="Psychological Observer - Clark">Psychological Observer - Clark</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10776.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10776.jpg" alt="Thrill-seeking Criminologist - Cox">Thrill-seeking Criminologist - Cox</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10777.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10777.jpg" alt="Saintess of Love - Aria">Saintess of Love - Aria</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10778.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10778.jpg" alt="Forever Be Praised - King Uther">Forever Be Praised - King Uther</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10779.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10779.jpg" alt="Rookie Detective - Annika">Rookie Detective - Annika</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10780.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10780.jpg" alt="Lady in Waiting - Chelsey">Lady in Waiting - Chelsey</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10781.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10781.jpg" alt="Head Harvestman - Lex">Head Harvestman - Lex</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10782.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10782.jpg" alt="Frontline Inspection - Lestrade">Frontline Inspection - Lestrade</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10783.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10783.jpg" alt="Regal Descent - Charles">Regal Descent - Charles</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10784.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10784.jpg" alt="Arthurian Pedigree - George">Arthurian Pedigree - George</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10801.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10801.jpg" alt="Spirit">Spirit</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10802.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10802.jpg" alt="Shy">Shy</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10803.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10803.jpg" alt="Lady Black">Lady Black</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10804.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10804.jpg" alt="Ai Tennoji">Ai Tennoji</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10805.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10805.jpg" alt="Mianlong">Mianlong</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10806.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10806.jpg" alt="Century">Century</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10807.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10807.jpg" alt="Stardust">Stardust</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10808.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10808.jpg" alt="Iko Koishikawa">Iko Koishikawa</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10810.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10810.jpg" alt="Stigma">Stigma</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10811.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10811.jpg" alt="Tzveta">Tzveta</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10812.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10812.jpg" alt="Doki">Doki</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10813.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10813.jpg" alt="Kufufu">Kufufu</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10814.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10814.jpg" alt="Inori">Inori</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10815.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10815.jpg" alt="Kwabara">Kwabara</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10816.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10816.jpg" alt="Utsuro">Utsuro</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10818.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10818.jpg" alt="Shrimpy">Shrimpy</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10828.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10828.jpg" alt="The Unchanging Synthetic Soul - Lilith">The Unchanging Synthetic Soul - Lilith</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10829.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10829.jpg" alt="Illogical Reason - Lilith">Illogical Reason - Lilith</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10835.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10835.jpg" alt="Uncontaminated Integrity - Zhen Ke">Uncontaminated Integrity - Zhen Ke</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10836.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10836.jpg" alt="Thundering Whips - Ling Sheng">Thundering Whips - Ling Sheng</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10837.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10837.jpg" alt="Herald of Misery - Mount Hushe Calamity">Herald of Misery - Mount Hushe Calamity</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10838.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10838.jpg" alt="Utter Abomination - Mount Buzhou Calamity (Demon)">Utter Abomination - Mount Buzhou Calamity (Demon)</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10839.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10839.jpg" alt="Utter Abomination - Mount Buzhou Calamity (Beast)">Utter Abomination - Mount Buzhou Calamity (Beast)</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10840.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10840.jpg" alt="Utter Abomination - Mount Buzhou Calamity (Dragon)">Utter Abomination - Mount Buzhou Calamity (Dragon)</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10843.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10843.jpg" alt="Fortified Pagoda - Yandi">Fortified Pagoda - Yandi</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10852.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10852.jpg" alt="Rem">Rem</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10854.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10854.jpg" alt="Ram">Ram</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10855.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10855.jpg" alt="Otto Suwen & Frufoo">Otto Suwen & Frufoo</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10856.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10856.jpg" alt="Felt">Felt</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10857.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10857.jpg" alt="Emilia & Pack">Emilia & Pack</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10858.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10858.jpg" alt="Crusch Karsten & Ferris">Crusch Karsten & Ferris</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10859.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10859.jpg" alt="Subaru Natsuki">Subaru Natsuki</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10860.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10860.jpg" alt="Beatrice">Beatrice</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10861.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10861.jpg" alt="White Whale">White Whale</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10862.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10862.jpg" alt="Theresia Van Astrea">Theresia Van Astrea</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10863.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10863.jpg" alt="Wilhelm Van Astrea">Wilhelm Van Astrea</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10864.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10864.jpg" alt="Julius Juukulius">Julius Juukulius</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10865.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10865.jpg" alt="Roswaal L Mathers">Roswaal L Mathers</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10866.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10866.jpg" alt="Meili Portroute">Meili Portroute</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10867.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10867.jpg" alt="Elsa Granhiert">Elsa Granhiert</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10868.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10868.jpg" alt="The Great Rabbits">The Great Rabbits</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10869.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10869.jpg" alt="Garfiel Tinsel">Garfiel Tinsel</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10870.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10870.jpg" alt="Petelgeuse Romaneeconti">Petelgeuse Romaneeconti</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10871.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10871.jpg" alt="Echidna">Echidna</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10874.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10874.jpg" alt="Ode to Fate - Beethoven">Ode to Fate - Beethoven</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10875.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10875.jpg" alt="Atonal Harmony - Mozart">Atonal Harmony - Mozart</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10876.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10876.jpg" alt="Operatic Tunesmith - Schubert">Operatic Tunesmith - Schubert</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10877.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10877.jpg" alt="Scandalous Träumerei - Schumann">Scandalous Träumerei - Schumann</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10878.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10878.jpg" alt="Line of Inspiration - Haydn">Line of Inspiration - Haydn</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10879.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10879.jpg" alt="Romantic Concerto - Tchaikovsky">Romantic Concerto - Tchaikovsky</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10881.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10881.jpg" alt="Orgiastic Waltzes - Liszt">Orgiastic Waltzes - Liszt</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10882.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10882.jpg" alt="The Farewell Waltz - Chopin">The Farewell Waltz - Chopin</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10883.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10883.jpg" alt="Devil’s Aria - Paganini">Devil’s Aria - Paganini</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10885.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10885.jpg" alt="March of Happiness - Mendelssohn">March of Happiness - Mendelssohn</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10886.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10886.jpg" alt="Veiled Conspiracy - Raymond">Veiled Conspiracy - Raymond</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10887.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10887.jpg" alt="Unnegotiable Rectitude - Garen">Unnegotiable Rectitude - Garen</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10891.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10891.jpg" alt="Rumble of Divine Order - Ke Hun">Rumble of Divine Order - Ke Hun</a>
+	<a href="https://kennylou92.github.io/tos_story_en/story/10892.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10892.jpg" alt="Refulgent Amberfire - Ke Hun">Refulgent Amberfire - Ke Hun</a>
+		<!-- <a href="https://kennylou92.github.io/tos_story/.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/.jpg" alt=""></a> -->
+        <!-- 只要繼續加這行，按鈕會自動換行 -->
+    </div>
+    <!-- JavaScript -->
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var sidebar = document.getElementById("sidebar");
+        var toggleButton = document.querySelector(".sidebar-toggle");
+
+        toggleButton.addEventListener("click", function() {
+            if (sidebar.classList.contains("active")) {
+                sidebar.classList.remove("active"); // 隱藏
+            } else {
+                sidebar.classList.add("active"); // 顯示
+            }
+        });
+
+        // 點擊內容區域時，側邊欄自動收回
+        document.addEventListener("click", function(event) {
+            if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
+    });
+	</script>
+
+</body>
+</html>
