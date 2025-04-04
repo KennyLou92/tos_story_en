@@ -1,0 +1,52 @@
+/* 側邊欄（預設隱藏） */
+.sidebar {
+    position: fixed;
+    left: -200px; /* 初始時 sidebar 在畫面外 */
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 20px;
+    transition: left 0.3s ease-in-out; /* 滑動動畫 */
+}
+
+/* 當 sidebar 顯示時 */
+.sidebar.active {
+    left: 0; /* 將 sidebar 移回可見範圍 */
+}
+
+/* 側邊欄內的連結 */
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+/* 按鈕（顯示 / 隱藏 sidebar） */
+.sidebar-toggle {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sidebar-toggle:hover {
+    background-color: #575757;
+}
+
+/* 主要內容 */
+.content {
+    margin-left: 20px; /* 保持內容不受 sidebar 影響 */
+    padding: 20px;
+}
